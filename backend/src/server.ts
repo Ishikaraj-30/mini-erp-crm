@@ -4,6 +4,8 @@ import cors from "cors";
 import { prisma } from "./config/prisma";
 import authRoutes from "./auth/auth.routes";
 import customerRoutes from "./customers/customer.routes";
+import productRoutes from "./products/product.routes";
+import challanRoutes from "./challans/challan.routes";
 
 const app = express();
 
@@ -18,6 +20,8 @@ app.use(
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/customers", customerRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/challans", challanRoutes);
 
 app.get("/api/health", (_req, res) => {
   res.status(200).json({
