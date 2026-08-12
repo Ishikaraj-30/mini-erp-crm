@@ -1,11 +1,11 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import { prisma } from "./config/prisma";
-import authRoutes from "./auth/auth.routes";
-import customerRoutes from "./customers/customer.routes";
-import productRoutes from "./products/product.routes";
-import challanRoutes from "./challans/challan.routes";
+import { prisma } from "./config/prisma.js";
+import authRoutes from "./auth/auth.routes.js";
+import customerRoutes from "./customers/customer.routes.js";
+import productRoutes from "./products/product.routes.js";
+import challanRoutes from "./challans/challan.routes.js";
 
 const app = express();
 

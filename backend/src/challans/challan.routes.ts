@@ -1,15 +1,15 @@
 import { Router } from "express";
-import { prisma } from "../config/prisma";
+import { prisma } from "../config/prisma.js";
 import {
   ChallanStatus,
   MovementType,
   Role,
-} from "../generated/prisma/enums";
+} from "../generated/prisma/enums.js";
 import {
   authenticate,
   authorize,
   type AuthRequest,
-} from "../auth/auth.middleware";
+} from "../auth/auth.middleware.js";
 
 const router = Router();
 

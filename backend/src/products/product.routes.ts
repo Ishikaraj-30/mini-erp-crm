@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { prisma } from "../config/prisma";
-import { MovementType, Role } from "../generated/prisma/enums";
+import { prisma } from "../config/prisma.js";
+import { MovementType, Role } from "../generated/prisma/enums.js";
 import {
   authenticate,
   authorize,
   type AuthRequest,
-} from "../auth/auth.middleware";
+} from "../auth/auth.middleware.js";
 
 const router = Router();
 
